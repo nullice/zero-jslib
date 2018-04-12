@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "none",
+    "strict": true,
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "declaration":true,
+    "declarationDir": "typings",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "types": [
+      "node",
+      "jest"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "tests/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

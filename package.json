@@ -1,0 +1,86 @@
+{
+  "name": "zero-jslib",
+  "fullName": "ZeroJslib",
+  "version": "0.5.1",
+  "description": "create your js lib from zero.",
+  "main": "dist/ZeroJslib.cjs.js",
+  "module": "dist/ZeroJslib.es.js",
+  "browser": "dist/ZeroJslib.umd.js",
+  "types": "typings/index.d.ts",
+  "typings": "typings/index.d.ts",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c",
+    "build-all": "rmdir-cli dist && rmdir-cli temp  && npm run build && npm run build-bundle",
+    "build-ts": "tsc src/index.ts -d -m commonjs --outDir dist/ts ",
+    "build-bundle": "webpack --verbose --mode=production",
+    "build-and-publish": "npm run build-all && npm run doc && npm run publish",
+    "doc": "jsdoc2md dist/ZeroJslib.es.js > doc/ZeroJslib.md && type README-HEAD.MD > README.MD && type doc\\ZeroJslib.md >> README.MD",
+    "test": "jest",
+    "test-coverage": "jest --coverage",
+    "publish": "npm publish --registry=https://registry.npmjs.org/ --disturl=/"
+  },
+  "author": "nullice",
+  "license": "MIT",
+  "repository": "",
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0-beta.44",
+    "@babel/runtime": "^7.0.0-beta.44"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.44",
+    "@babel/core": "^7.0.0-beta.44",
+    "@babel/plugin-external-helpers": "^7.0.0-beta.44",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0-beta.44",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.44",
+    "@babel/preset-env": "^7.0.0-beta.44",
+    "@types/jest": "^22.2.3",
+    "@types/node": "^9.6.4",
+    "babel-core": "^7.0.0-beta.3",
+    "babel-jest": "^22.4.3",
+    "babel-loader": "^8.0.0-beta.2",
+    "jest": "^22.4.3",
+    "rmdir-cli": "^2.0.6",
+    "rollup": "^0.57.1",
+    "rollup-plugin-babel": "^4.0.0-beta.4",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-cpy": "^1.0.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-typescript": "^0.8.1",
+    "rollup-plugin-typescript2": "^0.12.0",
+    "rollup-plugin-uglify": "^3.0.0",
+    "ts-jest": "^22.0.1",
+    "ts-loader": "^4.2.0",
+    "typescript": "^2.8.1",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest",
+      "^.+\\.jsx$": "babel-jest",
+      "^.+\\.js$": "babel-jest"
+    },
+    "verbose": true,
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "files": [
+    "dist",
+    "doc",
+    "LICENSE.md",
+    "README.md",
+    "typings"
+  ]
+}
