@@ -1,6 +1,6 @@
 # Zero - jslib
 
-<p align="center"> ![](./logo.png) </p>
+<p align="center"> <img src="https://github.com/nullice/zero-jslib/raw/master/logo.png"> </p>
 
 从 0 开始创建一个 JavaScritp / TypeScript 库。
 
