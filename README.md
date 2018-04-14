@@ -25,7 +25,7 @@
 ## 开始
 
 ```
-$ git clone 
+$ git clone https://github.com/nullice/zero-jslib.git
 $ cd zero-jslib
 $ npm run zero-init your-package-name YouPackgeFullName
 $ npm i
