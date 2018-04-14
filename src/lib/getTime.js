@@ -9,4 +9,5 @@ function getNowTime ()
     return new Date().getTime()
 }
 
-export  default  getNowTime
+
+module.exports =  getNowTime

@@ -13,7 +13,7 @@ import commonjs from "rollup-plugin-commonjs"
 import uglify from "rollup-plugin-uglify"
 import copy from "rollup-plugin-cpy"
 
-function genConfig (format = "umd", useUglify )
+function genConfig (format = "umd", useUglify)
 {
     let config = {
         input: ENTRY,
@@ -25,38 +25,28 @@ function genConfig (format = "umd", useUglify )
         plugins: [
             typescript({
                 typescript: require("typescript"),
-                cacheRoot:"./temp/cache_rollup-plugin-typescript2",
+                cacheRoot: "./temp/cache_rollup-plugin-typescript2",
                 useTsconfigDeclarationDir: true,
                 tsconfigOverride: {
                     compilerOptions: {
-                        module: "es2015"
+                        module: "es2015",
                     },
                 },
             }),
             babel({
                 exclude: "node_modules/**",
             }),
+            resolve(),
+            commonjs(),
         ],
     }
 
     if (format == "umd")
     {
-        config.plugins.push(resolve())
-        config.plugins.push(commonjs())
     }
 
     if (format == "cjs")
     {
-        config.plugins.push(resolve())
-        config.plugins.push(commonjs())
-        config.plugins.push( copy({
-            files: [ config.output.file],
-            dest: 'dist/types',
-            options: {
-                verbose: true,
-                rename: basename => `index.js`
-            }
-        }))
     }
 
     if (useUglify)

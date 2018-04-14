@@ -11,7 +11,6 @@
         "modules": false
       }
     ]
-
   ],
   "env": {
     "test": {

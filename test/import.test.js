@@ -18,18 +18,23 @@ let lib_bundle_node  = require(BUNDLE_NODE_PATH)
 
 test("import es.js", () => {
 expect(typeof lib_es.sayHi).toBe("function")
+expect(typeof lib_es.getTime).toBe("function")
 })
 test("import cjs.js", () => {
 expect(typeof lib_cjs.sayHi).toBe("function")
+expect(typeof lib_cjs.getTime).toBe("function")
 })
 
 test("import umd.js", () => {
 expect(typeof lib_umd.sayHi).toBe("function")
+expect(typeof lib_umd.getTime).toBe("function")
 })
 
 test("import bundle-node.js", () => {
 expect(typeof lib_bundle_node.sayHi).toBe("function")
+expect(typeof lib_bundle_node.getTime).toBe("function")
 })
 test("import bundle-web.js", () => {
 expect(typeof lib_bundle_web.sayHi).toBe("function")
+expect(typeof lib_bundle_web.getTime).toBe("function")
 })
