@@ -2,7 +2,6 @@ language: node_js
 node_js:
   - "8"
 before_script:
-     - npm run zero-init your-package-name YouPackgeFullName
      - npm run build-all
 after_script:
      - npm run test-coveralls
