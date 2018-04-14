@@ -74,8 +74,14 @@ npm run build
  - `.zero`：初始化模板
 
 
+
+
 ## Enjoy
 你只需要将你编写的库的接口写在 `src/index.js` 和 `src/index.typescript.ts` 中就可以了，`src/index.typescript.ts` 会用来生成
 `/typings` 给库的使用者提供类型检查和代码提示。
  
   
+## 注意
+
+- 默认会进行 node.js 和 Web 2 种打包，如果你是纯 node.js 库，并引入了 `fs` 这种只有 node.js 才能用的库，需要手动修改 `webpack.config.js` 去掉 Web 部分的打包，否则可能会打包失败。
+- `README.md` 文件会自动生成，所以你要写 README 要写在 `README-HEAD.md` 中，否则用 `npm run doc `生成文档时，`README.md` 会被覆盖。
