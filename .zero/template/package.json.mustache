@@ -18,6 +18,7 @@
     "doc": "jsdoc2md dist/{{fullName}}.es.js > doc/{{fullName}}.md && type README-HEAD.MD > README.MD && type doc\\{{fullName}}.md >> README.MD",
     "test": "jest",
     "test-coverage": "jest --coverage",
+    "test-coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "publish": "npm publish --registry=https://registry.npmjs.org/ --disturl=/",
     "zero-init": "node ./.zero/zero-init.js"
   },
@@ -41,6 +42,7 @@
     "babel-jest": "^22.4.3",
     "babel-loader": "^8.0.0-beta.2",
     "jest": "^22.4.3",
+    "coveralls": "^3.0.0",
     "mustache": "^2.3.0",
     "rmdir-cli": "^2.0.6",
     "rollup": "^0.57.1",

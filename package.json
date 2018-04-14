@@ -18,6 +18,7 @@
     "doc": "jsdoc2md dist/ZeroJslib.es.js > doc/ZeroJslib.md && type README-HEAD.MD > README.MD && type doc\\ZeroJslib.md >> README.MD",
     "test": "jest",
     "test-coverage": "jest --coverage",
+    "test-coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "publish": "npm publish --registry=https://registry.npmjs.org/ --disturl=/",
     "zero-init": "node ./.zero/zero-init.js"
   },
@@ -40,6 +41,7 @@
     "babel-core": "^7.0.0-beta.3",
     "babel-jest": "^22.4.3",
     "babel-loader": "^8.0.0-beta.2",
+    "coveralls": "^3.0.0",
     "jest": "^22.4.3",
     "mustache": "^2.3.0",
     "rmdir-cli": "^2.0.6",

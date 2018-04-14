@@ -18,7 +18,7 @@
 - 单元测试 (Jest）
 - 覆盖率测试 (Jest）
 - 自动文档生成（jsdoc）
-- 基本的持续集成配置（travis-ci）
+- 基本的持续集成配置（travis-ci, coverall）
 
 
 
