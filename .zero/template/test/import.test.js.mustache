@@ -9,7 +9,7 @@ const BUNDLE_WEB_PATH = "./../dist/" + LIB_NAME + ".bundle-web.js"
 const BUNDLE_NODE_PATH = "./../dist/" + LIB_NAME + ".bundle-node.js"
 
 
-import lib_es from "./../dist/ZeroJslib.es.js"
+import lib_es from "./../dist/{{fullName}}.es.js"
 let lib_cjs  = require(CJS_PATH)
 let lib_umd  = require(UMD_PATH)
 let lib_bundle_web  = require(BUNDLE_WEB_PATH)

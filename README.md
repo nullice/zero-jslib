@@ -1,4 +1,6 @@
 # Zero - jslib
+
+
 从 0 开始创建一个 JavaScritp / TypeScript 库
 
 **0 配置** : 预置了所有配置，可以直接开始编写代码，并且立即享受以下功能：
@@ -28,6 +30,7 @@ npm run build
 `doc`|根据源码的注释（jsdoc）生成文档，并把文档和 `README-HEAD.md` 合并生成 `README.md`
 `test`|启动测试（Jest）
 `test-coverage`|启动覆盖率测试并生成报告放在 `coverage` 目录下
+`publish`|发布包到 npm
 
 ### `src/index.js`
 主入口，会生成下列文件：
