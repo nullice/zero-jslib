@@ -27,8 +27,9 @@
 ```
 $ git clone https://github.com/nullice/zero-jslib.git
 $ cd zero-jslib
-$ npm run zero-init your-package-name YouPackgeFullName
 $ npm i
+$ npm run zero-init your-package-name YouPackgeFullName
+
 
 
 然后就可以删除本项目的 .git 了：
