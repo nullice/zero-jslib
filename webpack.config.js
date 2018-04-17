@@ -19,6 +19,9 @@ if (fs.existsSync(ENTRY_WEB))
         entry: ENTRY_WEB,
         mode: "development",
         target: "web",
+        resolve: {
+            extensions: ['.ts', '.js', '.json']
+        },
         output: {
             filename: PACKAGE_NAME + ".bundle-web.js",
             path: path.resolve(__dirname, "dist"),
@@ -73,6 +76,9 @@ if (fs.existsSync(ENTRY_NODE))
         entry: ENTRY_NODE,
         mode: "development",
         target: "node",
+        resolve: {
+            extensions: ['.ts', '.js', '.json']
+        },
         output: {
             library: PACKAGE_NAME,
             libraryTarget: "umd",
