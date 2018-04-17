@@ -2,7 +2,7 @@
 
 import sayHi from "./lib/sayHi.ts"
 import genColor from "./lib/genColor.ts"
-import  getTime from  "./lib/getTime.js"
+import getTime from "./lib/getTime.js"
 
 let tool = {
     genColor,
@@ -10,4 +10,4 @@ let tool = {
     getTime,
 }
 
-export  default  tool
+export default tool

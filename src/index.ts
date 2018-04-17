@@ -1,5 +1,6 @@
 import sayHi from "./lib/sayHi"
 import genColor from "./lib/genColor"
+
 let getTime = require("./lib/getTime")
 
 let tool = {
@@ -9,4 +10,4 @@ let tool = {
 }
 
 
-export default  tool
+export default tool
