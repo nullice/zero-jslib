@@ -1,0 +1,7 @@
+{
+  "printWidth": 500,
+  "parser": "flow",
+  "tabWidth": 4,
+  "bracketSpacing": true,
+  "semi": false
+}
